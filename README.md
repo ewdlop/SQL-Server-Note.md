@@ -47,3 +47,8 @@ CREATE NONCLUSTERED COLUMNSTORE INDEX NCCI_MyTable ON MyTable(Column1, Column2);
 - **Compatibility**: Columnstore indexes are available in SQL Server Standard and Enterprise editions, but certain advanced features may only be available in Enterprise.
 
 Columnstore indexes are an essential tool for optimizing performance on large datasets and can significantly enhance query performance for read-intensive workloads.
+
+
+### TSQL
+
+https://github.com/ewdlop/SQLNotes/tree/main/T-Sql
