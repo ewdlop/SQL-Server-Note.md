@@ -1,0 +1,17 @@
+--another one relates to marketing
+
+CREATE MATERIALIZED VIEW SalesSummary
+AS
+SELECT
+    SalesDate,
+    ProductID,
+    SUM(SalesAmount) AS TotalSales,
+    COUNT(*) AS TransactionCount
+FROM Sales
+GROUP BY SalesDate, ProductID;
+
+CREATE UNIQUE CLUSTERED INDEX IX_SalesSummary_SalesDate
+ON SalesSummary (SalesDate);
+
+CREATE NONCLUSTERED INDEX IX_SalesSummary_ProductID
+ON SalesSummary (ProductID);
